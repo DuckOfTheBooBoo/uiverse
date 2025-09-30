@@ -83,6 +83,7 @@
           alt="Group"
           src="/group-102.png"
         />
+        <ImageFrame image-url="/Rectangle.jpg" title="Speaker" subtitle="Salmahita Ataya Pradilla Ilmu Kesehatan, FKM UI 2023" />
       </div>
       <img class="w-full" alt="Vector" src="/vector.svg" />
     </section>
@@ -171,6 +172,11 @@
         designed for ambitious high school and college students like you!
       </p>
     </section>
+
+    <!-- Divider -->
+    <div class="px-2">
+      <img class="w-full" alt="Vector" src="/vector-7.svg" />
+    </div>
 
     <!-- Footer -->
     <footer class="relative py-12 mt-8">
