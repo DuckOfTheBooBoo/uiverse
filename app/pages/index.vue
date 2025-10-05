@@ -17,7 +17,7 @@
 
         <NuxtLink to="/">
           <img
-            class="h-10 md:h-12 lg:h-14"
+            class="h-52 md:h-12 lg:h-14"
             alt="Element"
             src="/9-20250714-054208-0000-1.png"
           />
@@ -83,7 +83,11 @@
           alt="Group"
           src="/group-102.png"
         />
-        <ImageFrame image-url="/Rectangle.jpg" title="Speaker" subtitle="Salmahita Ataya Pradilla Ilmu Kesehatan, FKM UI 2023" />
+
+        <div v-for="(speaker, index) in speakerList" :key="index" class="absolute z-10" :style="{top: speaker.position.top, left: speaker.position.left}">
+          <ImageFrame image-url="/Rectangle.jpg" :title="speaker.title" :subtitle="speaker.name" :subtitle2="speaker.major" />
+        </div>
+
       </div>
       <img class="w-full" alt="Vector" src="/vector.svg" />
     </section>
@@ -92,19 +96,21 @@
     <section
       class="container mx-auto px-4 py-8 flex items-center justify-center gap-4"
     >
-      <img class="w-[106px] h-[97px]" alt="Group" src="/group-111.png" />
+      <img class="w-1/3" alt="Group" src="/Group 121.png" />
       <div class="text-center">
-        <div
-          class="[font-family:'Montserrat',Helvetica] font-black text-transparent text-[16.1px]"
-        >
-          <span class="text-[#aa007a]"> OPEN RECRUITMENT <br /> </span>
-          <span class="text-[#ff60b6]">JOIN THE TEAM</span>
+        <div class="[font-family:'Montserrat',Helvetica] font-black text-transparent text-sm sm:text-lg md:text-2xl lg:text-6xl">
+          <span class="text-[#aa007a] block">
+            OPEN RECRUITMENT
+          </span>
+          <span class="text-[#ff60b6] block">
+            JOIN THE TEAM
+          </span>
         </div>
         <UiButton
-          class="mt-4 w-[198px] h-[31px] bg-[#ff60b6] rounded-[13.45px] shadow-[0px_1.34px_1.34px_#00000040]"
+          class="mt-4 lg:w-fit px-5 bg-[#ff60b6] rounded-[13.45px] shadow-[0px_1.34px_1.34px_#00000040]"
         >
           <span
-            class="[font-family:'Montserrat',Helvetica] font-black text-[#ab007b] text-[12.1px]"
+            class="[font-family:'Montserrat',Helvetica] font-black text-[#ab007b] lg:text-2xl"
           >
             CLICK HERE TO JOIN US
           </span>
@@ -120,7 +126,7 @@
     <!-- Media Partner & Partnership Section -->
     <section class="container mx-auto px-4 py-8 text-center">
       <h2
-        class="[font-family:'Montserrat',Helvetica] font-black text-[#ab007b] text-[12.3px] mb-8"
+        class="[font-family:'Montserrat',Helvetica] font-black text-[#ab007b] text-5xl mb-8"
       >
         MEDIA PARTNER & PARTNERSHIP
       </h2>
@@ -145,27 +151,27 @@
     <!-- Newsletter Section -->
     <section class="container mx-auto px-4 py-8 text-center">
       <h2
-        class="[font-family:'Montserrat',Helvetica] font-black text-[#aa007a] text-[12.3px]"
+        class="[font-family:'Montserrat',Helvetica] font-black text-[#aa007a] text-5xl"
       >
         SUBSCRIBE TO OUR NEWSLETTER
       </h2>
       <form class="mt-4 flex justify-center items-center gap-2">
         <UiInput
-          class="w-48 h-[27px] bg-[#fffdfd] rounded-[15.42px] border-[0.26px] border-solid border-[#9f9f9f] shadow-[0px_1.03px_1.03px_#00000040]"
+          class="h-16 max-w-96 bg-[#fffdfd] rounded-[15.42px] border-[0.26px] border-solid border-[#9f9f9f] shadow-[0px_1.03px_1.03px_#00000040] text-2xl"
           placeholder="Insert your e-mail"
         />
         <UiButton
-          class="w-[63px] h-[27px] bg-[#ff60b6] rounded-[7.71px] shadow-[0px_1.03px_1.03px_#00000040]"
+          class="h-16 w-20 bg-[#ff60b6] rounded-[7.71px] shadow-[0px_1.03px_1.03px_#00000040]"
         >
           <span
-            class="[font-family:'Montserrat',Helvetica] font-semibold text-[#98077bb2] text-[12.3px]"
+            class="[font-family:'Montserrat',Helvetica] font-semibold text-[#98077bb2] text-lg"
           >
             Submit
           </span>
         </UiButton>
       </form>
       <p
-        class="mt-4 max-w-md mx-auto [font-family:'Glacial_Indifference-Bold',Helvetica] font-bold text-[#ed50ac] text-[12.3px]"
+        class="mt-4 max-w-2xl mx-auto [font-family:'Glacial_Indifference-Bold',Helvetica] font-bold text-[#ed50ac] text-xl"
       >
         Stay updated with the latest opportunities that matter: paid, unpaid,
         and everything in between. Plus, scholarships and cool highlights
@@ -194,6 +200,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
+import { speakerList } from "~/static/data";
 
 const navigationItems = [
   { label: "Home", href: "/" },

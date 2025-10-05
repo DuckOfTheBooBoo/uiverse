@@ -25,6 +25,11 @@
         >
           {{ subtitle }}
         </p>
+        <p
+          class="[font-family:'Glacial_Indifference-Regular',Helvetica] text-black text-lg"
+        >
+          {{ subtitle2 }}
+        </p>
       </div>
     </div>
   </template>
@@ -34,5 +39,6 @@
     imageUrl: string;
     title: string;
     subtitle: string;
+    subtitle2: string | undefined;
   }>();
   </script>
