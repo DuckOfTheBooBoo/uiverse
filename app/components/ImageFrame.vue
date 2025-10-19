@@ -43,8 +43,8 @@ defineProps<{
   imageUrl: string;
   title: string;
   subtitle: string;
-  subtitle2: string | undefined;
-  imageClass: string | undefined;
+  subtitle2?: string | undefined;
+  imageClass?: string | undefined;
 }>();
 
 defineOptions({
