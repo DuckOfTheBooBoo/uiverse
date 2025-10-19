@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts'],
   css: ['~/assets/css/main.css'],
   app: {
     head: {
@@ -18,5 +18,5 @@ export default defineNuxtConfig({
       ]
     }
   },
-  ssr: false
+  ssr: true
 })
