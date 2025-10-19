@@ -85,7 +85,7 @@
         />
 
         <div v-for="(speaker, index) in speakerList" :key="index" class="absolute z-10" :style="{top: speaker.position.top, left: speaker.position.left}">
-          <ImageFrame image-url="/Rectangle.jpg" :title="speaker.title" :subtitle="speaker.name" :subtitle2="speaker.major" />
+          <ImageFrame :image-url="speaker.imageUrl" :title="speaker.title" :subtitle="speaker.name" :subtitle2="speaker.major" :imageClass="speaker.addClass"/>
         </div>
 
       </div>
