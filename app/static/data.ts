@@ -121,67 +121,67 @@ export const creativeTeamList: Team[] = [
   {
     position: "Journalist",
     nameAndMajor: "Dzihni FIB'24",
-    imageUrl: "/team/dzihni.png", // Placeholder path
+    imageUrl: "/Dzihni - Journalist.webp", // Placeholder path
     row: 1,
   },
   {
     position: "Journalist",
     nameAndMajor: "Cathlyn FMIPA'24",
-    imageUrl: "/team/cathlyn.png", // Placeholder path
+    imageUrl: "/cathlyn.webp", // Placeholder path
     row: 1,
   },
   {
     position: "Journalist",
     nameAndMajor: "Almaira FIB'24",
-    imageUrl: "/team/almaira.png", // Placeholder path
+    imageUrl: "/almaira.jpg", // Placeholder path
     row: 1,
   },
   {
     position: "Writer",
     nameAndMajor: "Fio FISIP'24",
-    imageUrl: "/team/fio.png", // Placeholder path
+    imageUrl: "/fio.webp", // Placeholder path
     row: 2,
   },
   {
     position: "Writer",
     nameAndMajor: "Marsha FIB'23",
-    imageUrl: "/team/marsha.png", // Placeholder path
+    imageUrl: "/marsha.jpg", // Placeholder path
     row: 2,
   },
   {
     position: "Writer",
     nameAndMajor: "Lesta FISIP'24",
-    imageUrl: "/team/lesta.png", // Placeholder path
+    imageUrl: "/lesta.webp", // Placeholder path
     row: 2,
   },
   {
     position: "Writer",
     nameAndMajor: "Latifah FIB'24",
-    imageUrl: "/team/latifah.png", // Placeholder path
+    imageUrl: "/latifah.webp", // Placeholder path
     row: 3,
   },
   {
     position: "Editor",
     nameAndMajor: "Fuad FIB'23",
-    imageUrl: "/team/fuad.png", // Placeholder path
+    imageUrl: "/fuad.webp", // Placeholder path
     row: 3,
   },
   {
     position: "Editor",
     nameAndMajor: "Farrell FPSI'24",
-    imageUrl: "/team/farrell.png", // Placeholder path
+    imageUrl: "/farrel.webp", // Placeholder path
     row: 3,
   },
   {
     position: "Editor",
     nameAndMajor: "Zalfa Vokasi'24",
-    imageUrl: "/team/zalfa.png", // Placeholder path
+    imageUrl: "/zalfa.webp", // Placeholder path
     row: 4,
   },
   {
     position: "Editor",
     nameAndMajor: "Mila FIB'24",
-    imageUrl: "/team/mila.png", // Placeholder path
+    imageUrl: "/mila.webp", // Placeholder path
     row: 4,
   },
 ];
@@ -190,43 +190,43 @@ export const marketAndPRTeamList: Team[] = [
   {
     position: "Public Relation",
     nameAndMajor: "Lily Vokasi'24",
-    imageUrl: "/team/lily.png", // Placeholder path
+    imageUrl: "/lily.webp", // Placeholder path
     row: 1,
   },
   {
     position: "Public Relation",
     nameAndMajor: "Qia FKM'23",
-    imageUrl: "/team/qia.png", // Placeholder path
+    imageUrl: "/qia.webp", // Placeholder path
     row: 1,
   },
   {
     position: "Public Relation",
     nameAndMajor: "Izzan FIB'23",
-    imageUrl: "/team/izzan.png", // Placeholder path
-    row: 2,
+    imageUrl: "/izzan.webp", // Placeholder path
+    row: 1,
   },
   {
     position: "Social Media Specialist",
     nameAndMajor: "Rara FISIP'24",
-    imageUrl: "/team/rara.png", // Placeholder path
+    imageUrl: "/rara.webp", // Placeholder path
     row: 2,
   },
   {
     position: "Social Media Specialist",
     nameAndMajor: "Regina FIB'24",
-    imageUrl: "/team/regina.png", // Placeholder path
+    imageUrl: "/regina.webp", // Placeholder path
     row: 2,
   },
   {
     position: "Social Media Specialist",
-    nameAndMajor: "Retan FMIPA'24",
-    imageUrl: "/team/retan.png", // Placeholder path
+    nameAndMajor: "Refan FMIPA'24",
+    imageUrl: "/refan.webp", // Placeholder path
     row: 3,
   },
   {
     position: "Social Media Specialist",
     nameAndMajor: "Rani FIB'24",
-    imageUrl: "/team/rani.png", // Placeholder path
+    imageUrl: "/rani.webp", // Placeholder path
     row: 3,
   },
 ];

@@ -6,37 +6,21 @@
       <section class="leadership-section">
         <div class="leadership-grid">
           <div class="leader-card">
-            <ImageFrame
-              title="Founder & Director"
-              subtitle="Free FIB'23"
-              image-url="/image 44.jpg"
-            />
+            <ImageFrame title="Founder & Director" subtitle="Free FIB'23" image-url="/image 44.jpg" />
           </div>
 
           <div class="leader-card">
-            <ImageFrame
-              title="Co-Founder & Manager"
-              subtitle="Ney FT'23"
-              image-url="/Rectangle 85.jpg"
-            />
+            <ImageFrame title="Co-Founder & Manager" subtitle="Ney FT'23" image-url="/Rectangle 85.jpg" />
           </div>
         </div>
 
         <div class="team-members-grid">
           <div class="member-card">
-            <ImageFrame
-              title="Web Developer"
-              subtitle="Altaf FT'23"
-              image-url="/Arajdian Altaf - Web Developer.webp"
-            />
+            <ImageFrame title="Web Developer" subtitle="Altaf FT'23" image-url="/Arajdian Altaf - Web Developer.webp" />
           </div>
 
           <div class="member-card">
-            <ImageFrame
-              title="UI/UX"
-              subtitle="Asya FIB'23"
-              image-url="/asya.jpeg"
-            />
+            <ImageFrame title="UI/UX" subtitle="Asya FIB'23" image-url="/asya.jpeg" />
           </div>
         </div>
       </section>
@@ -45,91 +29,40 @@
         <h2 class="category-title">Editorial Team</h2>
         <section class="editorial-grid">
           <div class="first flex flex-row">
-            <ImageFrame
-              v-for="editorial in editorialGroups[1]"
-              :title="editorial.position"
-              :subtitle="editorial.nameAndMajor"
-              :image-url="editorial.imageUrl"
-            />
+            <ImageFrame v-for="editorial in editorialGroups[1]" :key="editorial.nameAndMajor"
+              :title="editorial.position" :subtitle="editorial.nameAndMajor" :image-url="editorial.imageUrl" />
           </div>
           <div class="second flex flex-row">
-            <ImageFrame
-              v-for="editorial in editorialGroups[2]"
-              :title="editorial.position"
-              :subtitle="editorial.nameAndMajor"
-              :image-url="editorial.imageUrl"
-            />
+            <ImageFrame v-for="editorial in editorialGroups[2]" :key="editorial.nameAndMajor"
+              :title="editorial.position" :subtitle="editorial.nameAndMajor" :image-url="editorial.imageUrl" />
           </div>
           <div class="third flex flex-row">
-            <ImageFrame
-              v-for="editorial in editorialGroups[3]"
-              :title="editorial.position"
-              :subtitle="editorial.nameAndMajor"
-              :image-url="editorial.imageUrl"
-            />
+            <ImageFrame v-for="editorial in editorialGroups[3]" :key="editorial.nameAndMajor"
+              :title="editorial.position" :subtitle="editorial.nameAndMajor" :image-url="editorial.imageUrl" />
           </div>
         </section>
         <h2 class="category-title">Creative Media Team</h2>
-        <section class="creative-grid">
-            <div class="first flex flex-col">
-                <ImageFrame
-                    v-for="creative in creativeGroups[1]"
-                    :title="creative.position"
-                    :subtitle="creative.nameAndMajor"
-                    :image-url="creative.imageUrl"
-                />
-            </div>
-            <div class="second flex flex-col">
-                <ImageFrame
-                    v-for="creative in creativeGroups[2]"
-                    :title="creative.position"
-                    :subtitle="creative.nameAndMajor"
-                    :image-url="creative.imageUrl"
-                />
-            </div>
-            <div class="third flex flex-col">
-                <ImageFrame
-                    v-for="creative in creativeGroups[3]"
-                    :title="creative.position"
-                    :subtitle="creative.nameAndMajor"
-                    :image-url="creative.imageUrl"
-                />
-            </div>
-            <div class="fourth flex flex-col">
-                <ImageFrame
-                    v-for="creative in creativeGroups[4]"
-                    :title="creative.position"
-                    :subtitle="creative.nameAndMajor"
-                    :image-url="creative.imageUrl"
-                />
-            </div>
+        <section class="creative-team-flex">
+          <div v-for="(row, rowIdx) in creativeRows" :key="rowIdx"
+            :class="['creative-flex-row', rowIdx === creativeRows.length - 1 ? 'last-row' : '']">
+            <ImageFrame v-for="creative in row" :key="creative.nameAndMajor" :title="creative.position"
+              :subtitle="creative.nameAndMajor" :image-url="creative.imageUrl" />
+          </div>
         </section>
         <h2 class="category-title">Marketing & Public Relation Team</h2>
         <section class="marketandpr-grid">
-            <div class="first flex flex-col">
-                <ImageFrame
-                    v-for="marketpr in marketPRGroups[1]"
-                    :title="marketpr.position"
-                    :subtitle="marketpr.nameAndMajor"
-                    :image-url="marketpr.imageUrl"
-                />
-            </div>
-            <div class="second flex flex-col">
-                <ImageFrame
-                    v-for="marketpr in marketPRGroups[2]"
-                    :title="marketpr.position"
-                    :subtitle="marketpr.nameAndMajor"
-                    :image-url="marketpr.imageUrl"
-                />
-            </div>
-            <div class="third flex flex-col">
-                <ImageFrame
-                    v-for="marketpr in marketPRGroups[3]"
-                    :title="marketpr.position"
-                    :subtitle="marketpr.nameAndMajor"
-                    :image-url="marketpr.imageUrl"
-                />
-            </div>
+          <div class="first flex flex-row">
+            <ImageFrame v-for="marketPR in marketPRGroups[1]" :key="marketPR.nameAndMajor" :title="marketPR.position"
+              :subtitle="marketPR.nameAndMajor" :image-url="marketPR.imageUrl" />
+          </div>
+          <div class="second flex flex-row">
+            <ImageFrame v-for="marketPR in marketPRGroups[2]" :key="marketPR.nameAndMajor" :title="marketPR.position"
+              :subtitle="marketPR.nameAndMajor" :image-url="marketPR.imageUrl" />
+          </div>
+          <div class="third flex flex-row">
+            <ImageFrame v-for="marketPR in marketPRGroups[3]" :key="marketPR.nameAndMajor" :title="marketPR.position"
+              :subtitle="marketPR.nameAndMajor" :image-url="marketPR.imageUrl" />
+          </div>
         </section>
       </section>
     </main>
@@ -138,8 +71,18 @@
 
 <script setup lang="ts">
 
-import {computed} from "vue";
-import {creativeTeamList, marketAndPRTeamList, editorialTeamList, type Team} from "~/static/data";
+import { computed } from "vue";
+import { creativeTeamList, marketAndPRTeamList, editorialTeamList, type Team } from "~/static/data";
+
+const gridColumns = 3;
+const chunkArray = (arr: Team[], chunkSize: number) => {
+  const result = [];
+  for (let i = 0; i < arr.length; i += chunkSize) {
+    result.push(arr.slice(i, i + chunkSize));
+  }
+  return result;
+};
+const creativeRows = computed(() => chunkArray(creativeTeamList, 3));
 
 const groupByRow = (list: Team[]) => {
   return list.reduce((acc, item) => {
@@ -159,56 +102,112 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
 
 <style scoped>
 .editorial-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
-.editorial-grid > .first {
-    grid-column: span 6 / span 6;
+.editorial-grid>.first {
+  grid-column: span 6 / span 6;
 }
 
-.editorial-grid > .second {
-    grid-column: span 4 / span 4;
-    grid-column-start: 2;
-    grid-row-start: 2;
+.editorial-grid>.second {
+  grid-column: span 4 / span 4;
+  grid-column-start: 2;
+  grid-row-start: 2;
 }
 
-.editorial-grid > .third {
-    grid-column: span 4 / span 4;
-    grid-column-start: 2;
-    grid-row-start: 3;
-}
-
-.creative-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-}
-
-.creative-grid > .first {
-    grid-column: span 4 / span 4;
-}
-
-.creative-grid > .second {
-    grid-column: span 4 / span 4;
-    grid-row-start: 2;
-}
-
-.creative-grid > .third {
-    grid-column: span 4 / span 4;
-    grid-row-start: 3;
-}
-
-.creative-grid > .fourth {
-    grid-column-start: 2;
-    grid-row-start: 4;
+.editorial-grid>.third {
+  grid-column: span 4 / span 4;
+  grid-column-start: 2;
+  grid-row-start: 3;
 }
 
 .marketandpr-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.marketandpr-grid>.first {
+  grid-column: span 6 / span 6;
+}
+
+.marketandpr-grid>.second {
+  grid-column: span 4 / span 4;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.marketandpr-grid>.third {
+  grid-column: span 4 / span 4;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.creative-team-flex {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.creative-flex-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.creative-grid>* {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.dummy-cell {
+  visibility: hidden;
+}
+
+.creative-grid>.first {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.creative-grid>.second {
+  grid-column: 1 / -1;
+  grid-row-start: 2;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.creative-grid>.third {
+  grid-column: 1 / -1;
+  grid-row-start: 3;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.creative-grid>.fourth {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .team-page {
@@ -443,16 +442,14 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
   width: 40px;
   height: 40px;
   background: linear-gradient(135deg, #e91e8c, #6366f1);
-  clip-path: polygon(
-    50% 0%,
-    65% 35%,
-    100% 50%,
-    65% 65%,
-    50% 100%,
-    35% 65%,
-    0% 50%,
-    35% 35%
-  );
+  clip-path: polygon(50% 0%,
+      65% 35%,
+      100% 50%,
+      65% 65%,
+      50% 100%,
+      35% 65%,
+      0% 50%,
+      35% 35%);
 }
 
 .member-info {
@@ -513,47 +510,53 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
 .flower-left {
   left: 20px;
   background: linear-gradient(135deg, #e91e8c33, #6366f133);
-  clip-path: polygon(
-    20% 100%,
-    30% 60%,
-    15% 50%,
-    30% 40%,
-    25% 20%,
-    40% 35%,
-    50% 15%,
-    60% 35%,
-    70% 25%,
-    65% 45%,
-    80% 55%,
-    65% 65%,
-    75% 85%,
-    60% 70%,
-    50% 90%,
-    40% 70%
-  );
+  clip-path: polygon(20% 100%,
+      30% 60%,
+      15% 50%,
+      30% 40%,
+      25% 20%,
+      40% 35%,
+      50% 15%,
+      60% 35%,
+      70% 25%,
+      65% 45%,
+      80% 55%,
+      65% 65%,
+      75% 85%,
+      60% 70%,
+      50% 90%,
+      40% 70%);
 }
 
 .flower-right {
   right: 20px;
   background: linear-gradient(135deg, #6366f133, #e91e8c33);
-  clip-path: polygon(
-    20% 100%,
-    30% 60%,
-    15% 50%,
-    30% 40%,
-    25% 20%,
-    40% 35%,
-    50% 15%,
-    60% 35%,
-    70% 25%,
-    65% 45%,
-    80% 55%,
-    65% 65%,
-    75% 85%,
-    60% 70%,
-    50% 90%,
-    40% 70%
-  );
+  clip-path: polygon(20% 100%,
+      30% 60%,
+      15% 50%,
+      30% 40%,
+      25% 20%,
+      40% 35%,
+      50% 15%,
+      60% 35%,
+      70% 25%,
+      65% 45%,
+      80% 55%,
+      65% 65%,
+      75% 85%,
+      60% 70%,
+      50% 90%,
+      40% 70%);
+}
+
+.last-row {
+  transform: scale(0.88);
+  transition: transform 0.2s;
+}
+
+.last-row>* {
+  /* keep items themselves full parent width */
+  max-width: 100%;
 }
 
 @media (max-width: 768px) {
