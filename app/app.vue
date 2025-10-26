@@ -50,7 +50,7 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import { computed } from "vue";
 
 const navigationItems = [
@@ -61,6 +61,7 @@ const navigationItems = [
 ];
 
 const leftNavItems = computed(() => navigationItems.slice(0, 2));
-
 const rightNavItems = computed(() => navigationItems.slice(2, 4));
+console.log(leftNavItems.value);
+console.log(rightNavItems.value);
 </script>
