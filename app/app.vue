@@ -36,15 +36,13 @@
       </nav>
     </header>
     <NuxtPage />
-    <footer class="bg-[#fffaed] relative py-12">
-      <div class="flex justify-between items-end px-4">
-      </div>
-      <!-- <div class="absolute bottom-0 left-0 right-0 text-center"> -->
-        <div class="flex justify-center items-center w-full flex-col">
-          <img class="" alt="Vector" src="/vector-4.svg" />
-          <img class="h-96 w-full" alt="Rectangle" src="/rectangle-76.svg" />
-          <img class="absolute w-[91px] h-[94px] bottom-14 right-96" alt="Group" src="/group-113.png" />
-          <img class="absolute w-[91px] h-[94px] bottom-14 left-96" alt="Group" src="/group-112.png" />
+    <footer class="bg-[#fffaed] relative pt-60 pb-0">
+      <!-- Rectangle background -->
+      <img src="/rectangle-76.svg" alt="Rectangle" class="absolute w-full left-0 right-0 bottom-0 h-36 z-0 m-0 p-0 select-none pointer-events-none" style="object-fit: cover" />
+      <!-- Flowers -->
+      <img class="absolute w-96 h-72 left-0 bottom-0 z-10 select-none pointer-events-none" alt="Flower Left" src="/flower.svg" />
+      <img class="absolute w-96 h-72 right-0 bottom-0 z-10 scale-x-[-1] select-none pointer-events-none" alt="Flower Right" src="/flower.svg" />
+      <div class="relative z-20 flex flex-col items-center justify-end min-h-[8rem]">
       </div>
     </footer>
   </div>
