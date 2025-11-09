@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-x-hidden">
-    <header class="bg-[#fffaed] relative">
+    <header class="bg-[#fffaed] fixed top-0 left-0 right-0 z-50">
       <nav class="container mx-auto max-w-5xl flex items-center md:justify-center md:gap-12 justify-between px-4 py-3 md:py-4">
         <div class="flex items-center gap-3">
           <!-- Mobile hamburger -->
@@ -68,6 +68,9 @@
         </nav>
       </div>
     </header>
+
+    <!-- Spacer to offset fixed header so content isn't hidden underneath -->
+    <div class="h-[32px]" aria-hidden="true"></div>
      
     <Transition name="page" mode="out-in">
       <NuxtPage />
