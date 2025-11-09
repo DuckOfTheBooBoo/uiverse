@@ -9,15 +9,27 @@
 
     <div class="w-full overflow-hidden">
       <div class="whitespace-nowrap animate-marquee">
-        <img src="/long.png" alt="" class="inline-block w-auto" />
-        <img src="/long.png" alt="" class="inline-block w-auto" />
+        <img
+          src="/long.png"
+          alt=""
+          class="inline-block w-auto max-w-none h-48 sm:h-32 md:h-60 lg:h-72 object-contain"
+        />
+        <img
+          src="/long.png"
+          alt=""
+          class="inline-block w-auto max-w-none h-48 sm:h-32 md:h-60 lg:h-72 object-contain"
+        />
       </div>
     </div>
 
     <div class="profiles-container">
       <div class="profile-card">
         <div class="profile-image-wrapper">
-          <img src="/image 45.png" alt="Free" class="profile-image scale-x-[-1]" />
+          <img
+            src="/FOTO FREE.png"
+            alt="Free"
+            class="profile-image"
+          />
         </div>
         <div class="profile-content">
           <h3 class="profile-name">Meet Free</h3>
@@ -26,7 +38,7 @@
       </div>
       <div class="profile-card">
         <div class="profile-image-wrapper">
-          <img src="/image 49.png" alt="Meet Ney" class="profile-image" />
+          <img src="/FOTO NEY.png" alt="Meet Ney" class="profile-image" />
         </div>
         <div class="profile-content">
           <h3 class="profile-name">Meet Ney</h3>
@@ -62,16 +74,14 @@ const profiles: Profile[] = [
     id: 1,
     name: "Meet Free",
     image: "/image 45.png",
-    description:
-      "Lorem Ipsummmmmmmmmmmmmmm mmmmmmmmmmmmmmmmmmmmmm mmmmmmmmmmmmmmmmmmmmmmm mmmmmmmmmmmmmmmmmmmmmmm mmmmmmmmmmmmmmmmmmmmmmm mmmmmmm",
+    description: "",
     blobClass: "blob-left",
   },
   {
     id: 2,
     name: "Meet Ney",
     image: "/image 49.png",
-    description:
-      "Lorem Ipsummmmmmmmmmmmmmm mmmmmmmmmmmmmmmmmmmmmm mmmmmmmmmmmmmmmmmmmmmmm mmmmmmmmmmmmmmmmmmmmmmm mmmmmmmmmmmmmmmmmmmmmmm mmmmmmm",
+    description: "",
     blobClass: "blob-right",
   },
 ];
@@ -80,7 +90,7 @@ const profiles: Profile[] = [
 <style scoped>
 .team-section {
   background-color: #fff7ea;
-  padding: 4rem 0rem 6rem;
+  padding: 4rem 0rem;
   position: relative;
   overflow: hidden;
 }
@@ -145,7 +155,7 @@ const profiles: Profile[] = [
 
 .profiles-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
@@ -181,9 +191,9 @@ const profiles: Profile[] = [
 .profile-name {
   font-size: 1.8rem;
   font-weight: 900;
-  color: #AB007B;
+  color: #ab007b;
   margin: 0 0 1rem 0;
-  font-family: 'Candal';
+  font-family: "Candal";
 }
 
 .profile-description {
@@ -192,7 +202,7 @@ const profiles: Profile[] = [
   font-size: 0.95rem;
   margin: 0;
   word-break: break-word;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 @media (max-width: 1024px) {
@@ -241,6 +251,6 @@ const profiles: Profile[] = [
 }
 
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 </style>

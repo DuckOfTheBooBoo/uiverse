@@ -6,7 +6,7 @@
       <section class="leadership-section">
         <div class="leadership-grid">
           <div class="leader-card">
-            <ImageFrame title="Founder & Director" subtitle="Free FIB'23" image-url="/image 44.jpg" />
+            <ImageFrame title="Founder & Director" subtitle="Free FIB'23" image-url="/free.webp" />
           </div>
 
           <div class="leader-card">
@@ -20,7 +20,7 @@
           </div>
 
           <div class="member-card">
-            <ImageFrame title="UI/UX" subtitle="Asya FIB'23" image-url="/asya.jpeg" />
+            <ImageFrame title="UI/UX" subtitle="Asya FIB'23" image-url="/asya_2.jpeg" />
           </div>
         </div>
       </section>
@@ -105,6 +105,7 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .editorial-grid>.first {
@@ -127,6 +128,7 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .marketandpr-grid>.first {

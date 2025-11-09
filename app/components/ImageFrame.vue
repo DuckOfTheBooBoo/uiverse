@@ -1,12 +1,12 @@
 <template>
-  <div class="w-full max-w-sm mx-auto">
+  <div class="w-full max-w-sm mx-auto md:w-40 lg:w-36" :class="imageClass">
     <div class="relative w-full" style="padding-bottom: 125%">
 
       <div class="absolute inset-0 z-0 flex items-center justify-center">
         <img
           :src="imageUrl"
           alt="Speaker image"
-          class="w-full h-full object-cover scale-100"
+          class="w-full h-full object-cover"
           :style="{ maskImage: 'url(/frame_mask.svg)', maskSize: 'contain', maskRepeat: 'no-repeat', maskPosition: 'center' }"
           />
       </div>
@@ -20,17 +20,17 @@
 
     <div class="text-center mt-4">
       <h3
-        class="[font-family:'Montserrat',Helvetica] font-black text-black text-3xl"
+        class="[font-family:'Montserrat',Helvetica] font-black text-black text-lg md:text-xl lg:text-2xl"
       >
         {{ title }}
       </h3>
       <p
-        class="[font-family:'Glacial_Indifference-Regular',Helvetica] text-black text-lg"
+        class="[font-family:'Glacial_Indifference-Regular',Helvetica] text-black text-md lg:text-sm"
       >
         {{ subtitle }}
       </p>
       <p
-        class="[font-family:'Glacial_Indifference-Regular',Helvetica] text-black text-lg"
+        class="[font-family:'Glacial_Indifference-Regular',Helvetica] text-black text-md lg:text-sm"
       >
         {{ subtitle2 }}
       </p>

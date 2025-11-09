@@ -1,10 +1,10 @@
 <template>
   <section class="about-section">
-    <div class="about-container">
-      <div class="about-content">
-
-        <h2 class="section-title">About Us</h2>
+    <div class="about-container flex flex-col-reverse sm:flex-row">
+      <div class="about-content max-w-[32rem]">
+        
         <div class="about-text">
+          <h2 class="section-title">About Us</h2>
           <p>
             UIverse Magazine Project is a digital media project in the form of a web-based magazine. It was created and launched on January 2, 2025, by Diva Aldilla Putri Damaswara, a student of the Russian Studies at Universitas Indonesia, class of 2023. The project’s goal is to share many kinds of stories, achievements, creations, innovations, and inspiring journeys of Universitas Indonesia students. The name “UIverse” comes from “UI” (Universitas Indonesia) and “Universe,” which shows the academic, social, and creative life of UI students. As an independent project, UIverse is not part of any organization and is made for the whole UI community. It shares different sides of student life, such as personal branding stories, academic and non-academic achievements, and topics about learning and self-growth. With a creative concept, this project also becomes a place for students to express ideas, share knowledge, and innovate, as well as a space for networking by inviting speakers and mentors from inside and outside UI, and opening opportunities for future collaborations.
           </p>
@@ -13,7 +13,7 @@
 
       <div class="about-image">
         <div class="decorative-blob">
-          <img src="/team.webp" alt="Team photo" />
+          <img src="/FOTO FUNGSIONARIS.png" alt="Team photo" />
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@ import VisionMission from '~/components/VisionMission.vue';
 <style scoped>
 .about-section {
   background-color: #FFF7EA;
-  padding: 4rem 2rem;
+  /* padding: 4rem 0rem; */
   position: relative;
   overflow: hidden;
 }
@@ -40,8 +40,6 @@ import VisionMission from '~/components/VisionMission.vue';
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
 }

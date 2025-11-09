@@ -106,7 +106,7 @@ export const editorialTeamList: Team[] = [
   {
     position: "Graphic Designer",
     nameAndMajor: "Ima Vokasi'24",
-    imageUrl: "/Fatimah - Graphic Desain.webp", // Placeholder path
+    imageUrl: "/ima.jpg", // Placeholder path
     row: 3,
   },
   {
@@ -214,7 +214,7 @@ export const marketAndPRTeamList: Team[] = [
   {
     position: "Social Media Specialist",
     nameAndMajor: "Regina FIB'24",
-    imageUrl: "/regina.webp", // Placeholder path
+    imageUrl: "/regina.jpg", // Placeholder path
     row: 2,
   },
   {

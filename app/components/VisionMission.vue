@@ -33,7 +33,7 @@
 
 .vision-mission-section {
   background-color: #FFF7EA;
-  padding: 4rem 2rem;
+  /* padding: 4rem 2rem; */
 }
 
 .vm-container {
@@ -45,7 +45,7 @@
 }
 
 .vm-card {
-  padding: 2.5rem;
+  /* padding: 2.5rem; */
   border-radius: 20px;
   position: relative;
   overflow: visible;
