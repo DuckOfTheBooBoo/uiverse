@@ -62,7 +62,7 @@
     <section
       class="container mx-auto px-4 py-8 flex items-center justify-center gap-4"
     >
-      <img class="w-1/3" alt="Group" src="/Group 121.png" />
+      <img class="w-1/3" alt="Group" src="/pengii.png" />
       <div class="text-center">
         <div class="[font-family:'Montserrat',Helvetica] font-black text-transparent text-sm sm:text-lg md:text-2xl lg:text-6xl">
           <span class="text-[#aa007a] block">
