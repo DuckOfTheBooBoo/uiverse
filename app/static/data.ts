@@ -94,7 +94,7 @@ export const editorialTeamList: Team[] = [
   {
     position: "Graphic Designer",
     nameAndMajor: "Jasmine Vokasi'24",
-    imageUrl: "/yasmine-graphic-design.webp",
+    imageUrl: "/yasmine-_-graphic-design.webp",
     row: 2,
   },
   {
@@ -112,7 +112,7 @@ export const editorialTeamList: Team[] = [
   {
     position: "Graphic Designer",
     nameAndMajor: "Azkia Vokasi'24",
-    imageUrl: "/Azkia-Graphic-Designer.webp",
+    imageUrl: "/Azkia-Graphic-Designer_.webp",
     row: 3,
   },
 ];
