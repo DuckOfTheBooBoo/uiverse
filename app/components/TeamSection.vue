@@ -26,7 +26,7 @@
       <div class="profile-card">
         <div class="profile-image-wrapper">
           <img
-            src="/FOTO FREE.png"
+            src="/FOTO-FREE.png"
             alt="Free"
             class="profile-image"
           />
@@ -38,7 +38,7 @@
       </div>
       <div class="profile-card">
         <div class="profile-image-wrapper">
-          <img src="/FOTO NEY.png" alt="Meet Ney" class="profile-image" />
+          <img src="/FOTO-NEY.png" alt="Meet Ney" class="profile-image" />
         </div>
         <div class="profile-content">
           <h3 class="profile-name">Meet Ney</h3>
