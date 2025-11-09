@@ -23,22 +23,33 @@ export default defineNuxtConfig({
     build: {
       rollupOptions: {
         output: {
-          // Sanitize asset filenames
           assetFileNames: (assetInfo) => {
-            let name = assetInfo.name || "asset";
-            // Replace spaces with hyphens or underscores
-            name = name.replace(/\s+/g, "-");
-
-            const extType = name.split(".").pop();
-            if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType || "")) {
-              return `assets/images/[name]-[hash][extname]`;
+            const name = assetInfo.name || '';
+            const ext = name.split('.').pop()?.toLowerCase() || '';
+            
+            // Don't touch CSS or JS files - let Nuxt handle them
+            if (ext === 'css' || ext === 'js') {
+              return '_nuxt/[name].[hash][extname]';
             }
-            return `assets/[name]-[hash][extname]`;
+            
+            // Sanitize spaces in other assets (images, fonts, etc.)
+            const sanitized = name.replace(/\s+/g, '-');
+            
+            // Organize by type
+            if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(ext)) {
+              return `_nuxt/[name].[hash][extname]`;
+            }
+            if (/woff2?|ttf|eot|otf/i.test(ext)) {
+              return `_nuxt/[name].[hash][extname]`;
+            }
+            
+            return `_nuxt/[name].[hash][extname]`;
           },
-          chunkFileNames: "assets/js/[name]-[hash].js",
-          entryFileNames: "assets/js/[name]-[hash].js",
-        },
-      },
-    },
-  },
+          // Leave chunk and entry files alone
+          chunkFileNames: '_nuxt/[name].[hash].js',
+          entryFileNames: '_nuxt/[name].[hash].js'
+        }
+      }
+    }
+  }
 });
