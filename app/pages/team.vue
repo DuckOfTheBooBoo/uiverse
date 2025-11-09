@@ -10,13 +10,13 @@
             <ImageFrame title="Founder & Director" subtitle="Free FIB'23" image-url="/free.webp" />
           </div>
           <div class="leader-card">
-            <ImageFrame title="Co-Founder & Manager" subtitle="Ney FT'23" image-url="/Rectangle 85.jpg" />
+            <ImageFrame title="Co-Founder & Manager" subtitle="Ney FT'23" image-url="/Rectangle-85.jpg" />
           </div>
         </div>
 
         <div class="team-members-grid">
           <div class="member-card">
-            <ImageFrame title="Web Developer" subtitle="Altaf FT'23" image-url="/Arajdian Altaf - Web Developer.webp" />
+            <ImageFrame title="Web Developer" subtitle="Altaf FT'23" image-url="/Arajdian-Altaf-Web-Developer.webp" />
           </div>
           <div class="member-card">
             <ImageFrame title="UI/UX" subtitle="Asya FIB'23" image-url="/asya_2.jpeg" />

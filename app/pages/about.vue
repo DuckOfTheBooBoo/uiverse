@@ -13,7 +13,7 @@
 
       <div class="about-image">
         <div class="decorative-blob">
-          <img src="/FOTO FUNGSIONARIS.png" alt="Team photo" />
+          <img src="/FOTO-FUNGSIONARIS.png" alt="Team photo" />
         </div>
       </div>
     </div>

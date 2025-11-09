@@ -33,19 +33,19 @@ export default defineNuxtConfig({
             }
             
             // Sanitize spaces in other assets (images, fonts, etc.)
-            const sanitized = name.replace(/\s+/g, '-');
+            // Note: [name] will use the original filename, so we need a different approach
+            const sanitizedName = name.replace(/\s+/g, '-').replace(/\.[^.]+$/, '');
             
-            // Organize by type
+            // Return with sanitized name
             if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(ext)) {
-              return `_nuxt/[name].[hash][extname]`;
+              return `_nuxt/${sanitizedName}.[hash].${ext}`;
             }
             if (/woff2?|ttf|eot|otf/i.test(ext)) {
-              return `_nuxt/[name].[hash][extname]`;
+              return `_nuxt/${sanitizedName}.[hash].${ext}`;
             }
             
-            return `_nuxt/[name].[hash][extname]`;
+            return `_nuxt/${sanitizedName}.[hash].${ext}`;
           },
-          // Leave chunk and entry files alone
           chunkFileNames: '_nuxt/[name].[hash].js',
           entryFileNames: '_nuxt/[name].[hash].js'
         }
