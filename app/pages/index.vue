@@ -195,7 +195,7 @@ const partnerLogos = [
     alt: "Logo SAYINC",
   },
   {
-    src: "/logo-ink---talk.png",
+    src: "/logo-ink-talk.png",
     alt: "Logo ink talk",
   },
   {
