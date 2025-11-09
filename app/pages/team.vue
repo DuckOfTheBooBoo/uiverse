@@ -1,5 +1,5 @@
 <template>
-  <div class="team-page">
+  <div class="team-page mt-10 sm:mt-0">
     <main class="team-main">
       <h1 class="page-title">Our Team</h1>
 
@@ -140,7 +140,7 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 4rem;
 }
 
@@ -148,13 +148,14 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0; /* Prevent grid blowout */
 }
 
 .team-members-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -162,6 +163,7 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0; /* Prevent grid blowout */
 }
 
 /* Team Sections */
@@ -190,7 +192,7 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
 }
 
 .row-wrapper > * {
-  flex: 0 1 280px; /* Each image is ~280px wide by default */
+  flex: 0 1 280px;
   min-width: 0;
 }
 
@@ -233,6 +235,11 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
 
   .category-title {
     font-size: 1.75rem;
+  }
+
+  .leadership-grid,
+  .team-members-grid {
+    max-width: 700px;
   }
 
   .row-wrapper {

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-sm mx-auto md:w-40 lg:w-36" :class="imageClass">
+  <div class="w-full max-w-sm mx-auto md:max-w-xs lg:max-w-sm" :class="imageClass">
     <div class="relative w-full" style="padding-bottom: 125%">
 
       <div class="absolute inset-0 z-0 flex items-center justify-center">
