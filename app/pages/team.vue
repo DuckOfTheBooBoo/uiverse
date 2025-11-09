@@ -215,6 +215,9 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
 .team-page {
   min-height: 100vh;
   background-color: #fdf8f0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
 }
 
 .navigation {
@@ -270,8 +273,10 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
 .team-main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem 6rem;
+  padding: 3rem 0 6rem;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .page-title {
@@ -593,6 +598,16 @@ const marketPRGroups = computed(() => groupByRow(marketAndPRTeamList));
 
   .category-title {
     font-size: 1.5rem;
+  }
+
+  /* reduce outer padding on small screens */
+  .team-page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .team-main {
+    padding: 2rem 0 4rem;
   }
 }
 </style>

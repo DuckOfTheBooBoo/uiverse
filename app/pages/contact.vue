@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#fffaed] flex flex-col items-center pt-32 pb-8">
+  <div class="min-h-screen bg-[#fffaed] flex flex-col items-center pt-32 pb-8 px-4 sm:px-8 md:px-12">
     <!-- Headline -->
     <h1 class="text-3xl md:text-4xl font-extrabold text-[#b30482] mb-8 text-center">Got Questions and Ideas?</h1>
     <!-- Form -->

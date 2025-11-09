@@ -32,7 +32,7 @@ import VisionMission from '~/components/VisionMission.vue';
 <style scoped>
 .about-section {
   background-color: #FFF7EA;
-  /* padding: 4rem 0rem; */
+  padding: 4rem 1.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -131,6 +131,10 @@ import VisionMission from '~/components/VisionMission.vue';
 }
 
 @media (max-width: 968px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
   .about-container {
     grid-template-columns: 1fr;
     gap: 2rem;
