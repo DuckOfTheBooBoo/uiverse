@@ -1,7 +1,5 @@
 <template>
   <main class="bg-[#fffaed] overflow-x-hidden w-full min-w-[390px]">
-    
-
     <!-- Hero Section -->
     <section class="relative">
       <img
@@ -37,7 +35,8 @@
       </div>
     </section>
 
-    <section class="relative my-32">
+    <!-- DESKTOP: Floating Speaker Layout -->
+    <section class="relative my-32 hidden md:block">
       <div class="absolute inset-0">
         <img
           class="absolute top-[5%] left-[10%]"
@@ -50,18 +49,49 @@
           src="/group-102.png"
         />
 
-        <div v-for="(speaker, index) in speakerList" :key="index" class="absolute z-10" :style="{top: speaker.position.top, left: speaker.position.left}">
-          <ImageFrame :image-url="speaker.imageUrl" :title="speaker.title" :subtitle="speaker.name" :subtitle2="speaker.major" :imageClass="speaker.addClass"/>
+        <div 
+          v-for="(speaker, index) in speakerList" 
+          :key="index" 
+          class="absolute z-10" 
+          :style="{top: speaker.position.top, left: speaker.position.left}"
+        >
+          <ImageFrame 
+            :image-url="speaker.imageUrl" 
+            :title="speaker.title" 
+            :subtitle="speaker.name" 
+            :subtitle2="speaker.major" 
+            :imageClass="speaker.addClass"
+          />
         </div>
-
       </div>
       <img class="w-full" alt="Vector" src="/vector.svg" />
     </section>
 
+    <!-- MOBILE: Stacked Speaker Layout -->
+    <section class="my-16 md:hidden px-4">
+      <h2 class="[font-family:'Montserrat',Helvetica] font-black text-[#ab007b] text-3xl text-center mb-8">
+        OUR SPEAKERS
+      </h2>
+      
+      <div class="flex flex-col items-center gap-8">
+        <div 
+          v-for="(speaker, index) in speakerList" 
+          :key="index"
+          class="w-full max-w-[280px]"
+        >
+          <ImageFrame 
+            :image-url="speaker.imageUrl" 
+            :title="speaker.title" 
+            :subtitle="speaker.name" 
+            :subtitle2="speaker.major" 
+            :imageClass="speaker.addClass"
+          />
+        </div>
+      </div>
+    </section>
+
     <!-- Open Recruitment Section -->
-    <section
-      class="container mx-auto px-4 py-8 flex items-center justify-center gap-4"
-    >
+    <section class="container mx-auto px-4 py-8 flex items-center justify-center gap-4">
       <img class="w-1/3" alt="Group" src="/pengii.png" />
       <div class="text-center">
         <div class="[font-family:'Montserrat',Helvetica] font-black text-transparent text-sm sm:text-lg md:text-2xl lg:text-6xl">
@@ -149,7 +179,6 @@
     <div class="px-2">
       <img class="w-full" alt="Vector" src="/vector-7.svg" />
     </div>
-
   </main>
 </template>
 
@@ -216,6 +245,6 @@ const partnerLogos = [
 .animate-scroll {
   animation: scroll 20s linear infinite;
   display: flex;
-  width: 200%; /* to make it seamless */
+  width: 200%;
 }
 </style>
